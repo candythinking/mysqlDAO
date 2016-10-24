@@ -28,7 +28,7 @@ public class JDBCTools
 		Reader reader;                                 //新建读对象
 		try
 		{
-			reader = new FileReader("src\\config.propreties"); //将配置文件里的数据读出来
+			reader = new FileReader("src\\main\\resources\\config.propreties"); //将配置文件里的数据读出来
 			properties.load(reader);                           //加载到属性中
 		}
 		catch (Exception e)
