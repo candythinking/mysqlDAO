@@ -1,6 +1,7 @@
 package com.farm.dao;
 
 import com.farm.model.Farm;
+import com.farm.utill.Descartes;
 import com.farm.utill.JDBCTools;
 
 import java.lang.reflect.Field;
@@ -14,7 +15,7 @@ import java.util.Map;
  */
 public class FarmDao {
 
-    public List queryColumn(Map<String,String> map, String orderByField, String limit) {
+    public List queryColumn(Map<String,String> map, String orderByField,String sort, String limit) {
 
         Class cl = Farm.class;
         Connection conn = JDBCTools.openDB();
@@ -25,18 +26,33 @@ public class FarmDao {
             ResultSet resultSet = null;
             String sql = "";
             if(map != null && map.size()>0){
-                StringBuffer terms = new StringBuffer(10);
-                int count = 0;
-                int size = map.size();
+                List<List<String>> dimvalue = new ArrayList<List<String>>();
                 for(Map.Entry<String,String> entry : map.entrySet()){
-                    count ++;
-                    terms.append(entry.getKey());
-                    terms.append(" like ");
-                    terms.append("\"%"+entry.getValue()+"%\"");
-                    if (count==size) {
-                        break;
+                    List<String> v = new ArrayList<String>();
+                    String[] values = entry.getValue().split(";");
+                    for(String s : values){
+                        StringBuffer term = new StringBuffer();
+                        if (s.trim().equals(""))
+                            continue;
+                        term.append(entry.getKey());
+                        term.append(" like ");
+                        term.append("\"%"+s.trim()+"%\"");
+                        v.add(term.toString());
                     }
-                    terms.append(" and ");
+                    if (v.size()>0){
+                        dimvalue.add(v);
+                    }
+                }
+                List<String> result = new ArrayList<String>();
+                Descartes.run(dimvalue,result,0,"");
+                StringBuffer terms = new StringBuffer();
+                int cn = 0;
+                for(String s : result){
+                    cn ++;
+                    terms.append(s.substring(4));
+                    if (cn==result.size())
+                        break;
+                    terms.append(" or ");
                 }
                 sql = "select * from " + cl.getSimpleName().toLowerCase() + " WHERE " + terms.toString();
             }else {
@@ -46,6 +62,9 @@ public class FarmDao {
                 sql = sql + " order by " + orderByField;
             }else {
                 sql = sql + " order by time";
+            }
+            if (sort.trim().equalsIgnoreCase("desc")){
+                sql = sql + " DESC";
             }
             if(limit != null){
                 sql = sql + " limit " + limit;

@@ -13,11 +13,11 @@ public class main
 	{
 		FarmDao farmDao = new FarmDao();
 		Map<String,String> map = new HashMap<String,String>();
-//		map.put("province","北京");
+		map.put("province","北京;云南");
 //		map.put("name","大豆");
-		map.put("market","油");
-		map.put("time","2014-12");
-		List list1 = farmDao.queryColumn(map,null,null);
+//		map.put("market","油");
+		map.put("time","2014-12;2015");
+		List list1 = farmDao.queryColumn(map,null,"desc",null);
 		for(Object ob : list1){
 			System.out.println(ob);
 		}
