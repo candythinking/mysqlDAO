@@ -4,98 +4,1986 @@
     <schema id="1" name="farm">
       <visible>1</visible>
     </schema>
-    <schema id="2" name="farmproduce"/>
-    <schema id="3" name="hive"/>
+    <schema id="2" name="farmproduce">
+      <visible>1</visible>
+    </schema>
+    <schema id="3" name="hive">
+      <visible>1</visible>
+    </schema>
     <schema id="4" name="information_schema"/>
     <schema id="5" name="mysql"/>
     <schema id="6" name="partyInfo"/>
-    <schema id="7" name="test"/>
+    <schema id="7" name="test">
+      <visible>1</visible>
+    </schema>
     <table id="8" parent="1" name="farm"/>
     <table id="9" parent="1" name="member"/>
     <table id="10" parent="1" name="users"/>
-    <column id="11" parent="8" name="id">
+    <table id="11" parent="1" name="SalesDetail"/>
+    <table id="12" parent="2" name="price"/>
+    <table id="13" parent="3" name="BUCKETING_COLS"/>
+    <table id="14" parent="3" name="CDS"/>
+    <table id="15" parent="3" name="COLUMNS_V2"/>
+    <table id="16" parent="3" name="COMPACTION_QUEUE"/>
+    <table id="17" parent="3" name="COMPLETED_TXN_COMPONENTS"/>
+    <table id="18" parent="3" name="DATABASE_PARAMS"/>
+    <table id="19" parent="3" name="DBS"/>
+    <table id="20" parent="3" name="DB_PRIVS"/>
+    <table id="21" parent="3" name="DELEGATION_TOKENS"/>
+    <table id="22" parent="3" name="FUNCS"/>
+    <table id="23" parent="3" name="FUNC_RU"/>
+    <table id="24" parent="3" name="GLOBAL_PRIVS"/>
+    <table id="25" parent="3" name="HIVE_LOCKS"/>
+    <table id="26" parent="3" name="IDXS"/>
+    <table id="27" parent="3" name="INDEX_PARAMS"/>
+    <table id="28" parent="3" name="MASTER_KEYS"/>
+    <table id="29" parent="3" name="NEXT_COMPACTION_QUEUE_ID"/>
+    <table id="30" parent="3" name="NEXT_LOCK_ID"/>
+    <table id="31" parent="3" name="NEXT_TXN_ID"/>
+    <table id="32" parent="3" name="NUCLEUS_TABLES"/>
+    <table id="33" parent="3" name="PARTITIONS"/>
+    <table id="34" parent="3" name="PARTITION_EVENTS"/>
+    <table id="35" parent="3" name="PARTITION_KEYS"/>
+    <table id="36" parent="3" name="PARTITION_KEY_VALS"/>
+    <table id="37" parent="3" name="PARTITION_PARAMS"/>
+    <table id="38" parent="3" name="PART_COL_PRIVS"/>
+    <table id="39" parent="3" name="PART_COL_STATS"/>
+    <table id="40" parent="3" name="PART_PRIVS"/>
+    <table id="41" parent="3" name="ROLES"/>
+    <table id="42" parent="3" name="ROLE_MAP"/>
+    <table id="43" parent="3" name="SDS"/>
+    <table id="44" parent="3" name="SD_PARAMS"/>
+    <table id="45" parent="3" name="SEQUENCE_TABLE"/>
+    <table id="46" parent="3" name="SERDES"/>
+    <table id="47" parent="3" name="SERDE_PARAMS"/>
+    <table id="48" parent="3" name="SKEWED_COL_NAMES"/>
+    <table id="49" parent="3" name="SKEWED_COL_VALUE_LOC_MAP"/>
+    <table id="50" parent="3" name="SKEWED_STRING_LIST"/>
+    <table id="51" parent="3" name="SKEWED_STRING_LIST_VALUES"/>
+    <table id="52" parent="3" name="SKEWED_VALUES"/>
+    <table id="53" parent="3" name="SORT_COLS"/>
+    <table id="54" parent="3" name="TABLE_PARAMS"/>
+    <table id="55" parent="3" name="TAB_COL_STATS"/>
+    <table id="56" parent="3" name="TBLS"/>
+    <table id="57" parent="3" name="TBL_COL_PRIVS"/>
+    <table id="58" parent="3" name="TBL_PRIVS"/>
+    <table id="59" parent="3" name="TXNS"/>
+    <table id="60" parent="3" name="TXN_COMPONENTS"/>
+    <table id="61" parent="3" name="TYPES"/>
+    <table id="62" parent="3" name="TYPE_FIELDS"/>
+    <table id="63" parent="3" name="VERSION"/>
+    <column id="64" parent="8" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="12" parent="8" name="province">
+    <column id="65" parent="8" name="province">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="13" parent="8" name="market">
+    <column id="66" parent="8" name="market">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="14" parent="8" name="type">
+    <column id="67" parent="8" name="type">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="15" parent="8" name="name">
+    <column id="68" parent="8" name="name">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="16" parent="8" name="standard">
+    <column id="69" parent="8" name="standard">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="17" parent="8" name="area">
+    <column id="70" parent="8" name="area">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="18" parent="8" name="color">
+    <column id="71" parent="8" name="color">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="19" parent="8" name="unit">
+    <column id="72" parent="8" name="unit">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="20" parent="8" name="minPrice">
+    <column id="73" parent="8" name="minPrice">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="21" parent="8" name="avgPrice">
+    <column id="74" parent="8" name="avgPrice">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="22" parent="8" name="maxPrice">
+    <column id="75" parent="8" name="maxPrice">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="23" parent="8" name="entertime">
+    <column id="76" parent="8" name="entertime">
       <data-type>datetime|0</data-type>
     </column>
-    <column id="24" parent="8" name="time">
+    <column id="77" parent="8" name="time">
       <data-type>date|0</data-type>
     </column>
-    <key id="25" parent="8" name="PRIMARY">
+    <key id="78" parent="8" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="26" parent="9" name="uid">
+    <column id="79" parent="9" name="uid">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="27" parent="9" name="employee_id">
+    <column id="80" parent="9" name="employee_id">
       <mandatory>1</mandatory>
       <data-type>varchar(10)|0</data-type>
     </column>
-    <column id="28" parent="9" name="nick_name">
+    <column id="81" parent="9" name="nick_name">
       <mandatory>1</mandatory>
       <data-type>varchar(20)|0</data-type>
     </column>
-    <column id="29" parent="9" name="status">
+    <column id="82" parent="9" name="status">
       <mandatory>1</mandatory>
       <data-type>varchar(10)|0</data-type>
     </column>
-    <key id="30" parent="9" name="PRIMARY">
+    <key id="83" parent="9" name="PRIMARY">
       <columns>uid</columns>
       <primary>1</primary>
     </key>
-    <column id="31" parent="10" name="id">
+    <column id="84" parent="10" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="32" parent="10" name="username">
+    <column id="85" parent="10" name="username">
       <data-type>varchar(255)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="33" parent="10" name="password">
+    <column id="86" parent="10" name="password">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <key id="34" parent="10" name="PRIMARY">
+    <key id="87" parent="10" name="PRIMARY">
       <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="88" parent="11" name="ID">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="89" parent="11" name="DepartName">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="90" parent="11" name="Sales">
+      <data-type>decimal(10,2)|0</data-type>
+    </column>
+    <column id="91" parent="11" name="SalesDate">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="92" parent="12" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="93" parent="12" name="province">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="94" parent="12" name="market">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="95" parent="12" name="type">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="96" parent="12" name="name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="97" parent="12" name="minPrice">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="98" parent="12" name="avgPrice">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="99" parent="12" name="maxPrice">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="100" parent="12" name="unit">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="101" parent="12" name="enterTime">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="102" parent="12" name="date">
+      <data-type>date|0</data-type>
+    </column>
+    <key id="103" parent="12" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="104" parent="13" name="SD_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="105" parent="13" name="BUCKET_COL_NAME">
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="106" parent="13" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="107" parent="13" name="BUCKETING_COLS_N49">
+      <columns>SD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="108" parent="13" name="PRIMARY">
+      <columns>SD_ID
+INTEGER_IDX</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="109" parent="13" name="BUCKETING_COLS_FK1">
+      <columns>SD_ID</columns>
+      <ref-key>~.SDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="110" parent="14" name="CD_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <key id="111" parent="14" name="PRIMARY">
+      <columns>CD_ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="112" parent="15" name="CD_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="113" parent="15" name="COMMENT">
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="114" parent="15" name="COLUMN_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="115" parent="15" name="TYPE_NAME">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="116" parent="15" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="117" parent="15" name="COLUMNS_V2_N49">
+      <columns>CD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="118" parent="15" name="PRIMARY">
+      <columns>CD_ID
+COLUMN_NAME</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="119" parent="15" name="COLUMNS_V2_FK1">
+      <columns>CD_ID</columns>
+      <ref-key>~.CDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="120" parent="16" name="CQ_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="121" parent="16" name="CQ_DATABASE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="122" parent="16" name="CQ_TABLE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="123" parent="16" name="CQ_PARTITION">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="124" parent="16" name="CQ_STATE">
+      <mandatory>1</mandatory>
+      <data-type>char(1)|0</data-type>
+    </column>
+    <column id="125" parent="16" name="CQ_TYPE">
+      <mandatory>1</mandatory>
+      <data-type>char(1)|0</data-type>
+    </column>
+    <column id="126" parent="16" name="CQ_WORKER_ID">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="127" parent="16" name="CQ_START">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="128" parent="16" name="CQ_RUN_AS">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <key id="129" parent="16" name="PRIMARY">
+      <columns>CQ_ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="130" parent="17" name="CTC_TXNID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="131" parent="17" name="CTC_DATABASE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="132" parent="17" name="CTC_TABLE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="133" parent="17" name="CTC_PARTITION">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="134" parent="18" name="DB_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="135" parent="18" name="PARAM_KEY">
+      <mandatory>1</mandatory>
+      <data-type>varchar(180)|0</data-type>
+    </column>
+    <column id="136" parent="18" name="PARAM_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <index id="137" parent="18" name="DATABASE_PARAMS_N49">
+      <columns>DB_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="138" parent="18" name="PRIMARY">
+      <columns>DB_ID
+PARAM_KEY</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="139" parent="18" name="DATABASE_PARAMS_FK1">
+      <columns>DB_ID</columns>
+      <ref-key>~.DBS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="140" parent="19" name="DB_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="141" parent="19" name="DESC">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="142" parent="19" name="DB_LOCATION_URI">
+      <mandatory>1</mandatory>
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="143" parent="19" name="NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="144" parent="19" name="OWNER_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="145" parent="19" name="OWNER_TYPE">
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <index id="146" parent="19" name="UNIQUE_DATABASE">
+      <columns>NAME</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="147" parent="19" name="PRIMARY">
+      <columns>DB_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="148" parent="19" name="UNIQUE_DATABASE">
+      <columns>NAME</columns>
+      <underlying-index>UNIQUE_DATABASE</underlying-index>
+    </key>
+    <column id="149" parent="20" name="DB_GRANT_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="150" parent="20" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="151" parent="20" name="DB_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="152" parent="20" name="GRANT_OPTION">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="153" parent="20" name="GRANTOR">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="154" parent="20" name="GRANTOR_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="155" parent="20" name="PRINCIPAL_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="156" parent="20" name="PRINCIPAL_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="157" parent="20" name="DB_PRIV">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <index id="158" parent="20" name="DBPRIVILEGEINDEX">
+      <columns>DB_ID
+PRINCIPAL_NAME
+PRINCIPAL_TYPE
+DB_PRIV
+GRANTOR
+GRANTOR_TYPE</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="159" parent="20" name="DB_PRIVS_N49">
+      <columns>DB_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="160" parent="20" name="PRIMARY">
+      <columns>DB_GRANT_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="161" parent="20" name="DBPRIVILEGEINDEX">
+      <columns>DB_ID
+PRINCIPAL_NAME
+PRINCIPAL_TYPE
+DB_PRIV
+GRANTOR
+GRANTOR_TYPE</columns>
+      <underlying-index>DBPRIVILEGEINDEX</underlying-index>
+    </key>
+    <foreign-key id="162" parent="20" name="DB_PRIVS_FK1">
+      <columns>DB_ID</columns>
+      <ref-key>~.DBS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="163" parent="21" name="TOKEN_IDENT">
+      <mandatory>1</mandatory>
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="164" parent="21" name="TOKEN">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <key id="165" parent="21" name="PRIMARY">
+      <columns>TOKEN_IDENT</columns>
+      <primary>1</primary>
+    </key>
+    <column id="166" parent="22" name="FUNC_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="167" parent="22" name="CLASS_NAME">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="168" parent="22" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="169" parent="22" name="DB_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="170" parent="22" name="FUNC_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="171" parent="22" name="FUNC_TYPE">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="172" parent="22" name="OWNER_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="173" parent="22" name="OWNER_TYPE">
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <index id="174" parent="22" name="FUNCS_N49">
+      <columns>DB_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="175" parent="22" name="UNIQUEFUNCTION">
+      <columns>FUNC_NAME
+DB_ID</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="176" parent="22" name="PRIMARY">
+      <columns>FUNC_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="177" parent="22" name="UNIQUEFUNCTION">
+      <columns>FUNC_NAME
+DB_ID</columns>
+      <underlying-index>UNIQUEFUNCTION</underlying-index>
+    </key>
+    <foreign-key id="178" parent="22" name="FUNCS_FK1">
+      <columns>DB_ID</columns>
+      <ref-key>~.DBS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="179" parent="23" name="FUNC_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="180" parent="23" name="RESOURCE_TYPE">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="181" parent="23" name="RESOURCE_URI">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="182" parent="23" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="183" parent="23" name="FUNC_RU_N49">
+      <columns>FUNC_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="184" parent="23" name="PRIMARY">
+      <columns>FUNC_ID
+INTEGER_IDX</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="185" parent="23" name="FUNC_RU_FK1">
+      <columns>FUNC_ID</columns>
+      <ref-key>~.FUNCS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="186" parent="24" name="USER_GRANT_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="187" parent="24" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="188" parent="24" name="GRANT_OPTION">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="189" parent="24" name="GRANTOR">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="190" parent="24" name="GRANTOR_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="191" parent="24" name="PRINCIPAL_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="192" parent="24" name="PRINCIPAL_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="193" parent="24" name="USER_PRIV">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <index id="194" parent="24" name="GLOBALPRIVILEGEINDEX">
+      <columns>PRINCIPAL_NAME
+PRINCIPAL_TYPE
+USER_PRIV
+GRANTOR
+GRANTOR_TYPE</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="195" parent="24" name="PRIMARY">
+      <columns>USER_GRANT_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="196" parent="24" name="GLOBALPRIVILEGEINDEX">
+      <columns>PRINCIPAL_NAME
+PRINCIPAL_TYPE
+USER_PRIV
+GRANTOR
+GRANTOR_TYPE</columns>
+      <underlying-index>GLOBALPRIVILEGEINDEX</underlying-index>
+    </key>
+    <column id="197" parent="25" name="HL_LOCK_EXT_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="198" parent="25" name="HL_LOCK_INT_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="199" parent="25" name="HL_TXNID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="200" parent="25" name="HL_DB">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="201" parent="25" name="HL_TABLE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="202" parent="25" name="HL_PARTITION">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="203" parent="25" name="HL_LOCK_STATE">
+      <mandatory>1</mandatory>
+      <data-type>char(1)|0</data-type>
+    </column>
+    <column id="204" parent="25" name="HL_LOCK_TYPE">
+      <mandatory>1</mandatory>
+      <data-type>char(1)|0</data-type>
+    </column>
+    <column id="205" parent="25" name="HL_LAST_HEARTBEAT">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="206" parent="25" name="HL_ACQUIRED_AT">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="207" parent="25" name="HL_USER">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="208" parent="25" name="HL_HOST">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <index id="209" parent="25" name="HIVE_LOCK_TXNID_INDEX">
+      <columns>HL_TXNID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="210" parent="25" name="HL_TXNID_IDX">
+      <columns>HL_TXNID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="211" parent="25" name="PRIMARY">
+      <columns>HL_LOCK_EXT_ID
+HL_LOCK_INT_ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="212" parent="26" name="INDEX_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="213" parent="26" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="214" parent="26" name="DEFERRED_REBUILD">
+      <mandatory>1</mandatory>
+      <data-type>bit(1)|0</data-type>
+    </column>
+    <column id="215" parent="26" name="INDEX_HANDLER_CLASS">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="216" parent="26" name="INDEX_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="217" parent="26" name="INDEX_TBL_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="218" parent="26" name="LAST_ACCESS_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="219" parent="26" name="ORIG_TBL_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="220" parent="26" name="SD_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="221" parent="26" name="IDXS_N49">
+      <columns>ORIG_TBL_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="222" parent="26" name="IDXS_N50">
+      <columns>INDEX_TBL_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="223" parent="26" name="IDXS_N51">
+      <columns>SD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="224" parent="26" name="UNIQUEINDEX">
+      <columns>INDEX_NAME
+ORIG_TBL_ID</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="225" parent="26" name="PRIMARY">
+      <columns>INDEX_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="226" parent="26" name="UNIQUEINDEX">
+      <columns>INDEX_NAME
+ORIG_TBL_ID</columns>
+      <underlying-index>UNIQUEINDEX</underlying-index>
+    </key>
+    <foreign-key id="227" parent="26" name="IDXS_FK3">
+      <columns>INDEX_TBL_ID</columns>
+      <ref-key>~.TBLS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="228" parent="26" name="IDXS_FK1">
+      <columns>ORIG_TBL_ID</columns>
+      <ref-key>~.TBLS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="229" parent="26" name="IDXS_FK2">
+      <columns>SD_ID</columns>
+      <ref-key>~.SDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="230" parent="27" name="INDEX_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="231" parent="27" name="PARAM_KEY">
+      <mandatory>1</mandatory>
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="232" parent="27" name="PARAM_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <index id="233" parent="27" name="INDEX_PARAMS_N49">
+      <columns>INDEX_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="234" parent="27" name="PRIMARY">
+      <columns>INDEX_ID
+PARAM_KEY</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="235" parent="27" name="INDEX_PARAMS_FK1">
+      <columns>INDEX_ID</columns>
+      <ref-key>~.IDXS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="236" parent="28" name="KEY_ID">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="237" parent="28" name="MASTER_KEY">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <key id="238" parent="28" name="PRIMARY">
+      <columns>KEY_ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="239" parent="29" name="NCQ_NEXT">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="240" parent="30" name="NL_NEXT">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="241" parent="31" name="NTXN_NEXT">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="242" parent="32" name="CLASS_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="243" parent="32" name="TABLE_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="244" parent="32" name="TYPE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(4)|0</data-type>
+    </column>
+    <column id="245" parent="32" name="OWNER">
+      <mandatory>1</mandatory>
+      <data-type>varchar(2)|0</data-type>
+    </column>
+    <column id="246" parent="32" name="VERSION">
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="247" parent="32" name="INTERFACE_NAME">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="248" parent="32" name="PRIMARY">
+      <columns>CLASS_NAME</columns>
+      <primary>1</primary>
+    </key>
+    <column id="249" parent="33" name="PART_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="250" parent="33" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="251" parent="33" name="LAST_ACCESS_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="252" parent="33" name="PART_NAME">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="253" parent="33" name="SD_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="254" parent="33" name="TBL_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="255" parent="33" name="LINK_TARGET_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="256" parent="33" name="PARTITIONS_N49">
+      <columns>TBL_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="257" parent="33" name="PARTITIONS_N50">
+      <columns>SD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="258" parent="33" name="PARTITIONS_N51">
+      <columns>LINK_TARGET_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="259" parent="33" name="UNIQUEPARTITION">
+      <columns>PART_NAME
+TBL_ID</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="260" parent="33" name="PRIMARY">
+      <columns>PART_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="261" parent="33" name="UNIQUEPARTITION">
+      <columns>PART_NAME
+TBL_ID</columns>
+      <underlying-index>UNIQUEPARTITION</underlying-index>
+    </key>
+    <foreign-key id="262" parent="33" name="PARTITIONS_FK2">
+      <columns>SD_ID</columns>
+      <ref-key>~.SDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="263" parent="33" name="PARTITIONS_FK1">
+      <columns>TBL_ID</columns>
+      <ref-key>~.TBLS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="264" parent="33" name="PARTITIONS_FK3">
+      <columns>LINK_TARGET_ID</columns>
+      <ref-key>PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="265" parent="34" name="PART_NAME_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="266" parent="34" name="DB_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="267" parent="34" name="EVENT_TIME">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="268" parent="34" name="EVENT_TYPE">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="269" parent="34" name="PARTITION_NAME">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="270" parent="34" name="TBL_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <index id="271" parent="34" name="PARTITIONEVENTINDEX">
+      <columns>PARTITION_NAME</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="272" parent="34" name="PRIMARY">
+      <columns>PART_NAME_ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="273" parent="35" name="TBL_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="274" parent="35" name="PKEY_COMMENT">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="275" parent="35" name="PKEY_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="276" parent="35" name="PKEY_TYPE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="277" parent="35" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="278" parent="35" name="PARTITION_KEYS_N49">
+      <columns>TBL_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="279" parent="35" name="PRIMARY">
+      <columns>TBL_ID
+PKEY_NAME</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="280" parent="35" name="PARTITION_KEYS_FK1">
+      <columns>TBL_ID</columns>
+      <ref-key>~.TBLS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="281" parent="36" name="PART_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="282" parent="36" name="PART_KEY_VAL">
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="283" parent="36" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="284" parent="36" name="PARTITION_KEY_VALS_N49">
+      <columns>PART_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="285" parent="36" name="PRIMARY">
+      <columns>PART_ID
+INTEGER_IDX</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="286" parent="36" name="PARTITION_KEY_VALS_FK1">
+      <columns>PART_ID</columns>
+      <ref-key>~.PARTITIONS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="287" parent="37" name="PART_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="288" parent="37" name="PARAM_KEY">
+      <mandatory>1</mandatory>
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="289" parent="37" name="PARAM_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <index id="290" parent="37" name="PARTITION_PARAMS_N49">
+      <columns>PART_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="291" parent="37" name="PRIMARY">
+      <columns>PART_ID
+PARAM_KEY</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="292" parent="37" name="PARTITION_PARAMS_FK1">
+      <columns>PART_ID</columns>
+      <ref-key>~.PARTITIONS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="293" parent="38" name="PART_COLUMN_GRANT_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="294" parent="38" name="COLUMN_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="295" parent="38" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="296" parent="38" name="GRANT_OPTION">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="297" parent="38" name="GRANTOR">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="298" parent="38" name="GRANTOR_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="299" parent="38" name="PART_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="300" parent="38" name="PRINCIPAL_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="301" parent="38" name="PRINCIPAL_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="302" parent="38" name="PART_COL_PRIV">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <index id="303" parent="38" name="PARTITIONCOLUMNPRIVILEGEINDEX">
+      <columns>PART_ID
+COLUMN_NAME
+PRINCIPAL_NAME
+PRINCIPAL_TYPE
+PART_COL_PRIV
+GRANTOR
+GRANTOR_TYPE</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="304" parent="38" name="PART_COL_PRIVS_N49">
+      <columns>PART_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="305" parent="38" name="PRIMARY">
+      <columns>PART_COLUMN_GRANT_ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="306" parent="38" name="PART_COL_PRIVS_FK1">
+      <columns>PART_ID</columns>
+      <ref-key>~.PARTITIONS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="307" parent="39" name="CS_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="308" parent="39" name="DB_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="309" parent="39" name="TABLE_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="310" parent="39" name="PARTITION_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="311" parent="39" name="COLUMN_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="312" parent="39" name="COLUMN_TYPE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="313" parent="39" name="PART_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="314" parent="39" name="LONG_LOW_VALUE">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="315" parent="39" name="LONG_HIGH_VALUE">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="316" parent="39" name="DOUBLE_HIGH_VALUE">
+      <data-type>double(53,4)|0</data-type>
+    </column>
+    <column id="317" parent="39" name="DOUBLE_LOW_VALUE">
+      <data-type>double(53,4)|0</data-type>
+    </column>
+    <column id="318" parent="39" name="BIG_DECIMAL_LOW_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="319" parent="39" name="BIG_DECIMAL_HIGH_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="320" parent="39" name="NUM_NULLS">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="321" parent="39" name="NUM_DISTINCTS">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="322" parent="39" name="AVG_COL_LEN">
+      <data-type>double(53,4)|0</data-type>
+    </column>
+    <column id="323" parent="39" name="MAX_COL_LEN">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="324" parent="39" name="NUM_TRUES">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="325" parent="39" name="NUM_FALSES">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="326" parent="39" name="LAST_ANALYZED">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="327" parent="39" name="PART_COL_STATS_FK">
+      <columns>PART_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="328" parent="39" name="PCS_STATS_IDX">
+      <columns>DB_NAME
+TABLE_NAME
+COLUMN_NAME
+PARTITION_NAME</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="329" parent="39" name="PRIMARY">
+      <columns>CS_ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="330" parent="39" name="PART_COL_STATS_FK">
+      <columns>PART_ID</columns>
+      <ref-key>~.PARTITIONS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="331" parent="40" name="PART_GRANT_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="332" parent="40" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="333" parent="40" name="GRANT_OPTION">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="334" parent="40" name="GRANTOR">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="335" parent="40" name="GRANTOR_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="336" parent="40" name="PART_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="337" parent="40" name="PRINCIPAL_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="338" parent="40" name="PRINCIPAL_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="339" parent="40" name="PART_PRIV">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <index id="340" parent="40" name="PARTPRIVILEGEINDEX">
+      <columns>PART_ID
+PRINCIPAL_NAME
+PRINCIPAL_TYPE
+PART_PRIV
+GRANTOR
+GRANTOR_TYPE</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="341" parent="40" name="PART_PRIVS_N49">
+      <columns>PART_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="342" parent="40" name="PRIMARY">
+      <columns>PART_GRANT_ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="343" parent="40" name="PART_PRIVS_FK1">
+      <columns>PART_ID</columns>
+      <ref-key>~.PARTITIONS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="344" parent="41" name="ROLE_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="345" parent="41" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="346" parent="41" name="OWNER_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="347" parent="41" name="ROLE_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <index id="348" parent="41" name="ROLEENTITYINDEX">
+      <columns>ROLE_NAME</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="349" parent="41" name="PRIMARY">
+      <columns>ROLE_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="350" parent="41" name="ROLEENTITYINDEX">
+      <columns>ROLE_NAME</columns>
+      <underlying-index>ROLEENTITYINDEX</underlying-index>
+    </key>
+    <column id="351" parent="42" name="ROLE_GRANT_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="352" parent="42" name="ADD_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="353" parent="42" name="GRANT_OPTION">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="354" parent="42" name="GRANTOR">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="355" parent="42" name="GRANTOR_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="356" parent="42" name="PRINCIPAL_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="357" parent="42" name="PRINCIPAL_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="358" parent="42" name="ROLE_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="359" parent="42" name="ROLE_MAP_N49">
+      <columns>ROLE_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="360" parent="42" name="USERROLEMAPINDEX">
+      <columns>PRINCIPAL_NAME
+ROLE_ID
+GRANTOR
+GRANTOR_TYPE</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="361" parent="42" name="PRIMARY">
+      <columns>ROLE_GRANT_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="362" parent="42" name="USERROLEMAPINDEX">
+      <columns>PRINCIPAL_NAME
+ROLE_ID
+GRANTOR
+GRANTOR_TYPE</columns>
+      <underlying-index>USERROLEMAPINDEX</underlying-index>
+    </key>
+    <foreign-key id="363" parent="42" name="ROLE_MAP_FK1">
+      <columns>ROLE_ID</columns>
+      <ref-key>~.ROLES.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="364" parent="43" name="SD_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="365" parent="43" name="CD_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="366" parent="43" name="INPUT_FORMAT">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="367" parent="43" name="IS_COMPRESSED">
+      <mandatory>1</mandatory>
+      <data-type>bit(1)|0</data-type>
+    </column>
+    <column id="368" parent="43" name="IS_STOREDASSUBDIRECTORIES">
+      <mandatory>1</mandatory>
+      <data-type>bit(1)|0</data-type>
+    </column>
+    <column id="369" parent="43" name="LOCATION">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="370" parent="43" name="NUM_BUCKETS">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="371" parent="43" name="OUTPUT_FORMAT">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="372" parent="43" name="SERDE_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="373" parent="43" name="SDS_N49">
+      <columns>SERDE_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="374" parent="43" name="SDS_N50">
+      <columns>CD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="375" parent="43" name="PRIMARY">
+      <columns>SD_ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="376" parent="43" name="SDS_FK2">
+      <columns>CD_ID</columns>
+      <ref-key>~.CDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="377" parent="43" name="SDS_FK1">
+      <columns>SERDE_ID</columns>
+      <ref-key>~.SERDES.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="378" parent="44" name="SD_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="379" parent="44" name="PARAM_KEY">
+      <mandatory>1</mandatory>
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="380" parent="44" name="PARAM_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <index id="381" parent="44" name="SD_PARAMS_N49">
+      <columns>SD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="382" parent="44" name="PRIMARY">
+      <columns>SD_ID
+PARAM_KEY</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="383" parent="44" name="SD_PARAMS_FK1">
+      <columns>SD_ID</columns>
+      <ref-key>~.SDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="384" parent="45" name="SEQUENCE_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="385" parent="45" name="NEXT_VAL">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <key id="386" parent="45" name="PRIMARY">
+      <columns>SEQUENCE_NAME</columns>
+      <primary>1</primary>
+    </key>
+    <column id="387" parent="46" name="SERDE_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="388" parent="46" name="NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="389" parent="46" name="SLIB">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <key id="390" parent="46" name="PRIMARY">
+      <columns>SERDE_ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="391" parent="47" name="SERDE_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="392" parent="47" name="PARAM_KEY">
+      <mandatory>1</mandatory>
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="393" parent="47" name="PARAM_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <index id="394" parent="47" name="SERDE_PARAMS_N49">
+      <columns>SERDE_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="395" parent="47" name="PRIMARY">
+      <columns>SERDE_ID
+PARAM_KEY</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="396" parent="47" name="SERDE_PARAMS_FK1">
+      <columns>SERDE_ID</columns>
+      <ref-key>~.SERDES.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="397" parent="48" name="SD_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="398" parent="48" name="SKEWED_COL_NAME">
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="399" parent="48" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="400" parent="48" name="SKEWED_COL_NAMES_N49">
+      <columns>SD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="401" parent="48" name="PRIMARY">
+      <columns>SD_ID
+INTEGER_IDX</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="402" parent="48" name="SKEWED_COL_NAMES_FK1">
+      <columns>SD_ID</columns>
+      <ref-key>~.SDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="403" parent="49" name="SD_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="404" parent="49" name="STRING_LIST_ID_KID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="405" parent="49" name="LOCATION">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <index id="406" parent="49" name="SKEWED_COL_VALUE_LOC_MAP_N49">
+      <columns>STRING_LIST_ID_KID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="407" parent="49" name="SKEWED_COL_VALUE_LOC_MAP_N50">
+      <columns>SD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="408" parent="49" name="PRIMARY">
+      <columns>SD_ID
+STRING_LIST_ID_KID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="409" parent="49" name="SKEWED_COL_VALUE_LOC_MAP_FK1">
+      <columns>SD_ID</columns>
+      <ref-key>~.SDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="410" parent="49" name="SKEWED_COL_VALUE_LOC_MAP_FK2">
+      <columns>STRING_LIST_ID_KID</columns>
+      <ref-key>~.SKEWED_STRING_LIST.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="411" parent="50" name="STRING_LIST_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <key id="412" parent="50" name="PRIMARY">
+      <columns>STRING_LIST_ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="413" parent="51" name="STRING_LIST_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="414" parent="51" name="STRING_LIST_VALUE">
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="415" parent="51" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="416" parent="51" name="SKEWED_STRING_LIST_VALUES_N49">
+      <columns>STRING_LIST_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="417" parent="51" name="PRIMARY">
+      <columns>STRING_LIST_ID
+INTEGER_IDX</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="418" parent="51" name="SKEWED_STRING_LIST_VALUES_FK1">
+      <columns>STRING_LIST_ID</columns>
+      <ref-key>~.SKEWED_STRING_LIST.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="419" parent="52" name="SD_ID_OID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="420" parent="52" name="STRING_LIST_ID_EID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="421" parent="52" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="422" parent="52" name="SKEWED_VALUES_N49">
+      <columns>STRING_LIST_ID_EID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="423" parent="52" name="SKEWED_VALUES_N50">
+      <columns>SD_ID_OID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="424" parent="52" name="PRIMARY">
+      <columns>SD_ID_OID
+INTEGER_IDX</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="425" parent="52" name="SKEWED_VALUES_FK1">
+      <columns>SD_ID_OID</columns>
+      <ref-key>~.SDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="426" parent="52" name="SKEWED_VALUES_FK2">
+      <columns>STRING_LIST_ID_EID</columns>
+      <ref-key>~.SKEWED_STRING_LIST.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="427" parent="53" name="SD_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="428" parent="53" name="COLUMN_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="429" parent="53" name="ORDER">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="430" parent="53" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="431" parent="53" name="SORT_COLS_N49">
+      <columns>SD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="432" parent="53" name="PRIMARY">
+      <columns>SD_ID
+INTEGER_IDX</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="433" parent="53" name="SORT_COLS_FK1">
+      <columns>SD_ID</columns>
+      <ref-key>~.SDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="434" parent="54" name="TBL_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="435" parent="54" name="PARAM_KEY">
+      <mandatory>1</mandatory>
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="436" parent="54" name="PARAM_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <index id="437" parent="54" name="TABLE_PARAMS_N49">
+      <columns>TBL_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="438" parent="54" name="PRIMARY">
+      <columns>TBL_ID
+PARAM_KEY</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="439" parent="54" name="TABLE_PARAMS_FK1">
+      <columns>TBL_ID</columns>
+      <ref-key>~.TBLS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="440" parent="55" name="CS_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="441" parent="55" name="DB_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="442" parent="55" name="TABLE_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="443" parent="55" name="COLUMN_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="444" parent="55" name="COLUMN_TYPE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="445" parent="55" name="TBL_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="446" parent="55" name="LONG_LOW_VALUE">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="447" parent="55" name="LONG_HIGH_VALUE">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="448" parent="55" name="DOUBLE_HIGH_VALUE">
+      <data-type>double(53,4)|0</data-type>
+    </column>
+    <column id="449" parent="55" name="DOUBLE_LOW_VALUE">
+      <data-type>double(53,4)|0</data-type>
+    </column>
+    <column id="450" parent="55" name="BIG_DECIMAL_LOW_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="451" parent="55" name="BIG_DECIMAL_HIGH_VALUE">
+      <data-type>varchar(4000)|0</data-type>
+    </column>
+    <column id="452" parent="55" name="NUM_NULLS">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="453" parent="55" name="NUM_DISTINCTS">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="454" parent="55" name="AVG_COL_LEN">
+      <data-type>double(53,4)|0</data-type>
+    </column>
+    <column id="455" parent="55" name="MAX_COL_LEN">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="456" parent="55" name="NUM_TRUES">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="457" parent="55" name="NUM_FALSES">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="458" parent="55" name="LAST_ANALYZED">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="459" parent="55" name="TAB_COL_STATS_FK">
+      <columns>TBL_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="460" parent="55" name="PRIMARY">
+      <columns>CS_ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="461" parent="55" name="TAB_COL_STATS_FK">
+      <columns>TBL_ID</columns>
+      <ref-key>~.TBLS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="462" parent="56" name="TBL_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="463" parent="56" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="464" parent="56" name="DB_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="465" parent="56" name="LAST_ACCESS_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="466" parent="56" name="OWNER">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="467" parent="56" name="RETENTION">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="468" parent="56" name="SD_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="469" parent="56" name="TBL_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="470" parent="56" name="TBL_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="471" parent="56" name="VIEW_EXPANDED_TEXT">
+      <data-type>mediumtext|0</data-type>
+    </column>
+    <column id="472" parent="56" name="VIEW_ORIGINAL_TEXT">
+      <data-type>mediumtext|0</data-type>
+    </column>
+    <column id="473" parent="56" name="LINK_TARGET_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="474" parent="56" name="TBLS_N49">
+      <columns>DB_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="475" parent="56" name="TBLS_N50">
+      <columns>SD_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="476" parent="56" name="TBLS_N51">
+      <columns>LINK_TARGET_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="477" parent="56" name="UNIQUETABLE">
+      <columns>TBL_NAME
+DB_ID</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="478" parent="56" name="PRIMARY">
+      <columns>TBL_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="479" parent="56" name="UNIQUETABLE">
+      <columns>TBL_NAME
+DB_ID</columns>
+      <underlying-index>UNIQUETABLE</underlying-index>
+    </key>
+    <foreign-key id="480" parent="56" name="TBLS_FK2">
+      <columns>DB_ID</columns>
+      <ref-key>~.DBS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="481" parent="56" name="TBLS_FK1">
+      <columns>SD_ID</columns>
+      <ref-key>~.SDS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="482" parent="56" name="TBLS_FK3">
+      <columns>LINK_TARGET_ID</columns>
+      <ref-key>PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="483" parent="57" name="TBL_COLUMN_GRANT_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="484" parent="57" name="COLUMN_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="485" parent="57" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="486" parent="57" name="GRANT_OPTION">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="487" parent="57" name="GRANTOR">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="488" parent="57" name="GRANTOR_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="489" parent="57" name="PRINCIPAL_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="490" parent="57" name="PRINCIPAL_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="491" parent="57" name="TBL_COL_PRIV">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="492" parent="57" name="TBL_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="493" parent="57" name="TABLECOLUMNPRIVILEGEINDEX">
+      <columns>TBL_ID
+COLUMN_NAME
+PRINCIPAL_NAME
+PRINCIPAL_TYPE
+TBL_COL_PRIV
+GRANTOR
+GRANTOR_TYPE</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="494" parent="57" name="TBL_COL_PRIVS_N49">
+      <columns>TBL_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="495" parent="57" name="PRIMARY">
+      <columns>TBL_COLUMN_GRANT_ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="496" parent="57" name="TBL_COL_PRIVS_FK1">
+      <columns>TBL_ID</columns>
+      <ref-key>~.TBLS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="497" parent="58" name="TBL_GRANT_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="498" parent="58" name="CREATE_TIME">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="499" parent="58" name="GRANT_OPTION">
+      <mandatory>1</mandatory>
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="500" parent="58" name="GRANTOR">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="501" parent="58" name="GRANTOR_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="502" parent="58" name="PRINCIPAL_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="503" parent="58" name="PRINCIPAL_TYPE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="504" parent="58" name="TBL_PRIV">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="505" parent="58" name="TBL_ID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <index id="506" parent="58" name="TABLEPRIVILEGEINDEX">
+      <columns>TBL_ID
+PRINCIPAL_NAME
+PRINCIPAL_TYPE
+TBL_PRIV
+GRANTOR
+GRANTOR_TYPE</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="507" parent="58" name="TBL_PRIVS_N49">
+      <columns>TBL_ID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="508" parent="58" name="PRIMARY">
+      <columns>TBL_GRANT_ID</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="509" parent="58" name="TBL_PRIVS_FK1">
+      <columns>TBL_ID</columns>
+      <ref-key>~.TBLS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="510" parent="59" name="TXN_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="511" parent="59" name="TXN_STATE">
+      <mandatory>1</mandatory>
+      <data-type>char(1)|0</data-type>
+    </column>
+    <column id="512" parent="59" name="TXN_STARTED">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="513" parent="59" name="TXN_LAST_HEARTBEAT">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="514" parent="59" name="TXN_USER">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="515" parent="59" name="TXN_HOST">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <key id="516" parent="59" name="PRIMARY">
+      <columns>TXN_ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="517" parent="60" name="TC_TXNID">
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="518" parent="60" name="TC_DATABASE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="519" parent="60" name="TC_TABLE">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="520" parent="60" name="TC_PARTITION">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <index id="521" parent="60" name="TC_TXNID">
+      <columns>TC_TXNID</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <foreign-key id="522" parent="60" name="TXN_COMPONENTS_ibfk_1">
+      <columns>TC_TXNID</columns>
+      <ref-key>~.TXNS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="523" parent="61" name="TYPES_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="524" parent="61" name="TYPE_NAME">
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="525" parent="61" name="TYPE1">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="526" parent="61" name="TYPE2">
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <index id="527" parent="61" name="UNIQUE_TYPE">
+      <columns>TYPE_NAME</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="528" parent="61" name="PRIMARY">
+      <columns>TYPES_ID</columns>
+      <primary>1</primary>
+    </key>
+    <key id="529" parent="61" name="UNIQUE_TYPE">
+      <columns>TYPE_NAME</columns>
+      <underlying-index>UNIQUE_TYPE</underlying-index>
+    </key>
+    <column id="530" parent="62" name="TYPE_NAME">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="531" parent="62" name="COMMENT">
+      <data-type>varchar(256)|0</data-type>
+    </column>
+    <column id="532" parent="62" name="FIELD_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(128)|0</data-type>
+    </column>
+    <column id="533" parent="62" name="FIELD_TYPE">
+      <mandatory>1</mandatory>
+      <data-type>varchar(767)|0</data-type>
+    </column>
+    <column id="534" parent="62" name="INTEGER_IDX">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="535" parent="62" name="TYPE_FIELDS_N49">
+      <columns>TYPE_NAME</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="536" parent="62" name="PRIMARY">
+      <columns>TYPE_NAME
+FIELD_NAME</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="537" parent="62" name="TYPE_FIELDS_FK1">
+      <columns>TYPE_NAME</columns>
+      <ref-key>~.TYPES.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="538" parent="63" name="VER_ID">
+      <mandatory>1</mandatory>
+      <data-type>bigint(20)|0</data-type>
+    </column>
+    <column id="539" parent="63" name="SCHEMA_VERSION">
+      <mandatory>1</mandatory>
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="540" parent="63" name="VERSION_COMMENT">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="541" parent="63" name="PRIMARY">
+      <columns>VER_ID</columns>
       <primary>1</primary>
     </key>
   </database-model>
